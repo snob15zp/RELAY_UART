@@ -5,3 +5,5 @@ Attiny as a salve should respond to MODBUS requests.
 According to the protocol, communication with the microcircuit of the electricity meter, with the DS18b20 sensor, the on / off of two relays (and give on request the status of the outputs that control the relay) should be provided
 
 Program in C in AVR Studio.
+
+the relay board is almost completely checked and there is no update to the schematics, except the R65, which is 4.1 kohm.

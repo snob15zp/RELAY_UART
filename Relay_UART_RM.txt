@@ -1,0 +1,7 @@
+The operation algorithm is short.
+The device must communicate via MODBUS protocol (it must contain only those functions that are necessary) with ESP8266.
+Attiny as a salve should respond to MODBUS requests.
+
+According to the protocol, communication with the microcircuit of the electricity meter, with the DS18b20 sensor, the on / off of two relays (and give on request the status of the outputs that control the relay) should be provided
+
+Program in C in AVR Studio.

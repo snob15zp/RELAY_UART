@@ -40,12 +40,11 @@ int main()
 	softSerialBegin(seial_0);
 	
 	while (1) {
-		startTempConversion();
+		DS18b20_readRam();
 		_delay_ms(250);
 		_delay_ms(250);
-		_delay_ms(250);
-		getTemp();
-		softSerialWrite(getLB(),seial_0);
+		
+		/*softSerialWrite(getLB(),seial_0);
 		softSerialWrite(getHB(),seial_0);
 	   if (softSerialAvailable(seial_0)) {
 			softSerialWrite( softSerialRead(seial_0),seial_1 );
@@ -53,7 +52,7 @@ int main()
 		
 		if (softSerialAvailable(seial_1)) {
 			softSerialWrite( softSerialRead(seial_1),seial_0);
-		}
+		}*/
 	
 		}
 }

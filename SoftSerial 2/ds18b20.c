@@ -2,6 +2,7 @@
 #include "ds18b20.h"
 #include <avr/delay.h>
 unsigned char Temp_H, Temp_L, OK_Flag;
+char ds18b20_buffer[20];
 
 void  DS18B20_init(void)
 {
@@ -16,7 +17,14 @@ void  DS18B20_init(void)
   
 }
 
-
+void DS18b20_readRam(void){
+	DS18B20_init();        // Инициализация DS18B20
+	write_18b20(0xCC);     // Проверка кода датчика
+	write_18b20(0xBE);     // Считываем содержимое ОЗУ
+	for(char i=0; i<9; i++){
+		ds18b20_buffer[i]=read_18b20();
+	}
+}
 
 // Функция чтения байта из DS18B20
 unsigned char read_18b20(void)

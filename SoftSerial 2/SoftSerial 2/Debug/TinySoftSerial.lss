@@ -1,0 +1,1186 @@
+
+TinySoftSerial.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000648  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000006bc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000001f  00800060  00800060  000006bc  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000006bc  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000006ec  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000100  00000000  00000000  00000728  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000013a4  00000000  00000000  00000828  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000009c0  00000000  00000000  00001bcc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000a16  00000000  00000000  0000258c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000284  00000000  00000000  00002fa4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000005f5  00000000  00000000  00003228  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000b69  00000000  00000000  0000381d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000150  00000000  00000000  00004386  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	5e c0       	rjmp	.+188    	; 0xbe <__ctors_end>
+   2:	78 c0       	rjmp	.+240    	; 0xf4 <__bad_interrupt>
+   4:	fc c1       	rjmp	.+1016   	; 0x3fe <__vector_2>
+   6:	76 c0       	rjmp	.+236    	; 0xf4 <__bad_interrupt>
+   8:	75 c0       	rjmp	.+234    	; 0xf4 <__bad_interrupt>
+   a:	74 c0       	rjmp	.+232    	; 0xf4 <__bad_interrupt>
+   c:	73 c0       	rjmp	.+230    	; 0xf4 <__bad_interrupt>
+   e:	72 c0       	rjmp	.+228    	; 0xf4 <__bad_interrupt>
+  10:	71 c0       	rjmp	.+226    	; 0xf4 <__bad_interrupt>
+  12:	4f c1       	rjmp	.+670    	; 0x2b2 <__vector_9>
+  14:	6f c0       	rjmp	.+222    	; 0xf4 <__bad_interrupt>
+  16:	6e c0       	rjmp	.+220    	; 0xf4 <__bad_interrupt>
+  18:	6d c0       	rjmp	.+218    	; 0xf4 <__bad_interrupt>
+  1a:	6c c0       	rjmp	.+216    	; 0xf4 <__bad_interrupt>
+  1c:	6b c0       	rjmp	.+214    	; 0xf4 <__bad_interrupt>
+  1e:	6a c0       	rjmp	.+212    	; 0xf4 <__bad_interrupt>
+  20:	69 c0       	rjmp	.+210    	; 0xf4 <__bad_interrupt>
+
+00000022 <__trampolines_end>:
+  22:	00 c2       	rjmp	.+1024   	; 0x424 <__LOCK_REGION_LENGTH__+0x24>
+  24:	01 00       	.word	0x0001	; ????
+  26:	01 00       	.word	0x0001	; ????
+  28:	05 00       	.word	0x0005	; ????
+  2a:	05 00       	.word	0x0005	; ????
+  2c:	03 00       	.word	0x0003	; ????
+  2e:	00 e1       	ldi	r16, 0x10	; 16
+  30:	00 00       	nop
+  32:	01 00       	.word	0x0001	; ????
+  34:	0f 00       	.word	0x000f	; ????
+  36:	0f 00       	.word	0x000f	; ????
+  38:	0d 00       	.word	0x000d	; ????
+  3a:	00 96       	adiw	r24, 0x00	; 0
+  3c:	00 00       	nop
+  3e:	02 00       	.word	0x0002	; ????
+  40:	19 00       	.word	0x0019	; ????
+  42:	1a 00       	.word	0x001a	; ????
+  44:	17 00       	.word	0x0017	; ????
+  46:	12 7a       	andi	r17, 0xA2	; 162
+  48:	00 00       	nop
+  4a:	07 00       	.word	0x0007	; ????
+  4c:	20 00       	.word	0x0020	; ????
+  4e:	21 00       	.word	0x0021	; ????
+  50:	1d 00       	.word	0x001d	; ????
+  52:	80 70       	andi	r24, 0x00	; 0
+  54:	00 00       	nop
+  56:	0b 00       	.word	0x000b	; ????
+  58:	23 00       	.word	0x0023	; ????
+  5a:	23 00       	.word	0x0023	; ????
+  5c:	20 00       	.word	0x0020	; ????
+  5e:	00 4b       	sbci	r16, 0xB0	; 176
+  60:	00 00       	nop
+  62:	14 00       	.word	0x0014	; ????
+  64:	37 00       	.word	0x0037	; ????
+  66:	37 00       	.word	0x0037	; ????
+  68:	34 00       	.word	0x0034	; ????
+  6a:	40 38       	cpi	r20, 0x80	; 128
+  6c:	00 00       	nop
+  6e:	1e 00       	.word	0x001e	; ????
+  70:	4b 00       	.word	0x004b	; ????
+  72:	4b 00       	.word	0x004b	; ????
+  74:	48 00       	.word	0x0048	; ????
+  76:	80 25       	eor	r24, r0
+  78:	00 00       	nop
+  7a:	32 00       	.word	0x0032	; ????
+  7c:	72 00       	.word	0x0072	; ????
+  7e:	72 00       	.word	0x0072	; ????
+  80:	70 00       	.word	0x0070	; ????
+  82:	c0 12       	cpse	r12, r16
+  84:	00 00       	nop
+  86:	6e 00       	.word	0x006e	; ????
+  88:	e9 00       	.word	0x00e9	; ????
+  8a:	e9 00       	.word	0x00e9	; ????
+  8c:	e6 00       	.word	0x00e6	; ????
+  8e:	60 09       	sbc	r22, r0
+  90:	00 00       	nop
+  92:	e5 00       	.word	0x00e5	; ????
+  94:	d8 01       	movw	r26, r16
+  96:	d8 01       	movw	r26, r16
+  98:	d5 01       	movw	r26, r10
+  9a:	b0 04       	cpc	r11, r0
+  9c:	00 00       	nop
+  9e:	d3 01       	movw	r26, r6
+  a0:	b4 03       	fmuls	r19, r20
+  a2:	b4 03       	fmuls	r19, r20
+  a4:	b1 03       	fmuls	r19, r17
+  a6:	58 02       	muls	r21, r24
+  a8:	00 00       	nop
+  aa:	b4 03       	fmuls	r19, r20
+  ac:	67 07       	cpc	r22, r23
+  ae:	67 07       	cpc	r22, r23
+  b0:	62 07       	cpc	r22, r18
+  b2:	2c 01       	movw	r4, r24
+  b4:	00 00       	nop
+  b6:	67 07       	cpc	r22, r23
+  b8:	dd 0e       	add	r13, r29
+  ba:	dd 0e       	add	r13, r29
+  bc:	da 0e       	add	r13, r26
+
+000000be <__ctors_end>:
+  be:	11 24       	eor	r1, r1
+  c0:	1f be       	out	0x3f, r1	; 63
+  c2:	cf e5       	ldi	r28, 0x5F	; 95
+  c4:	d2 e0       	ldi	r29, 0x02	; 2
+  c6:	de bf       	out	0x3e, r29	; 62
+  c8:	cd bf       	out	0x3d, r28	; 61
+
+000000ca <__do_copy_data>:
+  ca:	10 e0       	ldi	r17, 0x00	; 0
+  cc:	a0 e6       	ldi	r26, 0x60	; 96
+  ce:	b0 e0       	ldi	r27, 0x00	; 0
+  d0:	e8 e4       	ldi	r30, 0x48	; 72
+  d2:	f6 e0       	ldi	r31, 0x06	; 6
+  d4:	02 c0       	rjmp	.+4      	; 0xda <__do_copy_data+0x10>
+  d6:	05 90       	lpm	r0, Z+
+  d8:	0d 92       	st	X+, r0
+  da:	a0 36       	cpi	r26, 0x60	; 96
+  dc:	b1 07       	cpc	r27, r17
+  de:	d9 f7       	brne	.-10     	; 0xd6 <__do_copy_data+0xc>
+
+000000e0 <__do_clear_bss>:
+  e0:	20 e0       	ldi	r18, 0x00	; 0
+  e2:	a0 e6       	ldi	r26, 0x60	; 96
+  e4:	b0 e0       	ldi	r27, 0x00	; 0
+  e6:	01 c0       	rjmp	.+2      	; 0xea <.do_clear_bss_start>
+
+000000e8 <.do_clear_bss_loop>:
+  e8:	1d 92       	st	X+, r1
+
+000000ea <.do_clear_bss_start>:
+  ea:	af 37       	cpi	r26, 0x7F	; 127
+  ec:	b2 07       	cpc	r27, r18
+  ee:	e1 f7       	brne	.-8      	; 0xe8 <.do_clear_bss_loop>
+  f0:	68 d0       	rcall	.+208    	; 0x1c2 <main>
+  f2:	a8 c2       	rjmp	.+1360   	; 0x644 <_exit>
+
+000000f4 <__bad_interrupt>:
+  f4:	85 cf       	rjmp	.-246    	; 0x0 <__vectors>
+
+000000f6 <DS18B20_init>:
+unsigned char Temp_H, Temp_L, OK_Flag;
+char ds18b20_buffer[20];
+
+void  DS18B20_init(void)
+{
+  DDRA |= (1 << PA7); // PC0 - выход
+  f6:	d7 9a       	sbi	0x1a, 7	; 26
+  PORTA &= ~(1 << PA7); // Устанавливаем низкий уровень
+  f8:	df 98       	cbi	0x1b, 7	; 27
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  fa:	83 ed       	ldi	r24, 0xD3	; 211
+  fc:	93 e0       	ldi	r25, 0x03	; 3
+  fe:	01 97       	sbiw	r24, 0x01	; 1
+ 100:	f1 f7       	brne	.-4      	; 0xfe <DS18B20_init+0x8>
+ 102:	00 c0       	rjmp	.+0      	; 0x104 <DS18B20_init+0xe>
+ 104:	00 00       	nop
+  _delay_us(490);
+  DDRA &= ~(1 << PA7); // PC0 - вход
+ 106:	d7 98       	cbi	0x1a, 7	; 26
+ 108:	95 eb       	ldi	r25, 0xB5	; 181
+ 10a:	9a 95       	dec	r25
+ 10c:	f1 f7       	brne	.-4      	; 0x10a <DS18B20_init+0x14>
+ 10e:	00 00       	nop
+  _delay_us(68);
+  OK_Flag = (PINA & (1 << PA7)); // Ловим импульс присутствия датчика
+ 110:	89 b3       	in	r24, 0x19	; 25
+ 112:	80 78       	andi	r24, 0x80	; 128
+ 114:	80 93 76 00 	sts	0x0076, r24	; 0x800076 <OK_Flag>
+ 118:	8b e4       	ldi	r24, 0x4B	; 75
+ 11a:	93 e0       	ldi	r25, 0x03	; 3
+ 11c:	01 97       	sbiw	r24, 0x01	; 1
+ 11e:	f1 f7       	brne	.-4      	; 0x11c <DS18B20_init+0x26>
+ 120:	00 c0       	rjmp	.+0      	; 0x122 <DS18B20_init+0x2c>
+ 122:	00 00       	nop
+ 124:	08 95       	ret
+
+00000126 <read_18b20>:
+	}
+}
+
+// Функция чтения байта из DS18B20
+unsigned char read_18b20(void)
+{
+ 126:	98 e0       	ldi	r25, 0x08	; 8
+  unsigned char i, data = 0;
+ 128:	80 e0       	ldi	r24, 0x00	; 0
+  for (i = 0; i < 8; i++)
+  {
+    DDRA |= (1 << PA7); // PC0 - выход
+ 12a:	d7 9a       	sbi	0x1a, 7	; 26
+ 12c:	25 e0       	ldi	r18, 0x05	; 5
+ 12e:	2a 95       	dec	r18
+ 130:	f1 f7       	brne	.-4      	; 0x12e <read_18b20+0x8>
+ 132:	00 00       	nop
+    _delay_us(2);
+    DDRA &= ~(1 << PA7); // PC0 - вход
+ 134:	d7 98       	cbi	0x1a, 7	; 26
+ 136:	2a e0       	ldi	r18, 0x0A	; 10
+ 138:	2a 95       	dec	r18
+ 13a:	f1 f7       	brne	.-4      	; 0x138 <read_18b20+0x12>
+ 13c:	00 c0       	rjmp	.+0      	; 0x13e <read_18b20+0x18>
+    _delay_us(4);
+    data = data >> 1; // Следующий бит
+ 13e:	86 95       	lsr	r24
+    if (PINA & (1 << PA7)) data |= 0x80;
+ 140:	cf 99       	sbic	0x19, 7	; 25
+ 142:	80 68       	ori	r24, 0x80	; 128
+ 144:	25 ea       	ldi	r18, 0xA5	; 165
+ 146:	2a 95       	dec	r18
+ 148:	f1 f7       	brne	.-4      	; 0x146 <read_18b20+0x20>
+ 14a:	00 00       	nop
+ 14c:	91 50       	subi	r25, 0x01	; 1
+
+// Функция чтения байта из DS18B20
+unsigned char read_18b20(void)
+{
+  unsigned char i, data = 0;
+  for (i = 0; i < 8; i++)
+ 14e:	69 f7       	brne	.-38     	; 0x12a <read_18b20+0x4>
+    data = data >> 1; // Следующий бит
+    if (PINA & (1 << PA7)) data |= 0x80;
+    _delay_us(62);
+  }
+  return data;
+}
+ 150:	08 95       	ret
+
+00000152 <write_18b20>:
+
+// Функция записи байта в DS18B20
+void write_18b20(unsigned char data)
+{
+ 152:	98 e0       	ldi	r25, 0x08	; 8
+  unsigned char i;
+  for (i = 0; i < 8; i++)
+  {
+    DDRA |= (1 << PA7); // PC0 - выход
+ 154:	d7 9a       	sbi	0x1a, 7	; 26
+ 156:	25 e0       	ldi	r18, 0x05	; 5
+ 158:	2a 95       	dec	r18
+ 15a:	f1 f7       	brne	.-4      	; 0x158 <write_18b20+0x6>
+ 15c:	00 00       	nop
+    _delay_us(2);
+    if (data & 0x01) DDRA &= ~(1 << PA7);
+ 15e:	80 ff       	sbrs	r24, 0
+ 160:	02 c0       	rjmp	.+4      	; 0x166 <write_18b20+0x14>
+ 162:	d7 98       	cbi	0x1a, 7	; 26
+ 164:	01 c0       	rjmp	.+2      	; 0x168 <write_18b20+0x16>
+    else DDRA |= (1 << PA7);
+ 166:	d7 9a       	sbi	0x1a, 7	; 26
+    data = data >> 1; // Следующий бит
+ 168:	86 95       	lsr	r24
+ 16a:	25 ea       	ldi	r18, 0xA5	; 165
+ 16c:	2a 95       	dec	r18
+ 16e:	f1 f7       	brne	.-4      	; 0x16c <write_18b20+0x1a>
+ 170:	00 00       	nop
+    _delay_us(62);
+    DDRA &= ~(1 << PA7); // PC0 - вход
+ 172:	d7 98       	cbi	0x1a, 7	; 26
+ 174:	25 e0       	ldi	r18, 0x05	; 5
+ 176:	2a 95       	dec	r18
+ 178:	f1 f7       	brne	.-4      	; 0x176 <write_18b20+0x24>
+ 17a:	00 00       	nop
+ 17c:	91 50       	subi	r25, 0x01	; 1
+
+// Функция записи байта в DS18B20
+void write_18b20(unsigned char data)
+{
+  unsigned char i;
+  for (i = 0; i < 8; i++)
+ 17e:	51 f7       	brne	.-44     	; 0x154 <write_18b20+0x2>
+    data = data >> 1; // Следующий бит
+    _delay_us(62);
+    DDRA &= ~(1 << PA7); // PC0 - вход
+    _delay_us(2);
+  }
+}                       // разрешаем прерывания
+ 180:	08 95       	ret
+
+00000182 <DS18b20_readRam>:
+  // если OK_Flag = 0 датчик подключен, OK_Flag = 1 датчик не подключен
+  _delay_us(422);
+  
+}
+
+void DS18b20_readRam(void){
+ 182:	0f 93       	push	r16
+ 184:	1f 93       	push	r17
+ 186:	cf 93       	push	r28
+ 188:	df 93       	push	r29
+	DS18B20_init();        // Инициализация DS18B20
+ 18a:	b5 df       	rcall	.-150    	; 0xf6 <DS18B20_init>
+	write_18b20(0xCC);     // Проверка кода датчика
+ 18c:	8c ec       	ldi	r24, 0xCC	; 204
+ 18e:	e1 df       	rcall	.-62     	; 0x152 <write_18b20>
+	write_18b20(0xBE);     // Считываем содержимое ОЗУ
+ 190:	8e eb       	ldi	r24, 0xBE	; 190
+ 192:	df df       	rcall	.-66     	; 0x152 <write_18b20>
+ 194:	c1 e6       	ldi	r28, 0x61	; 97
+ 196:	d0 e0       	ldi	r29, 0x00	; 0
+ 198:	0a e6       	ldi	r16, 0x6A	; 106
+ 19a:	10 e0       	ldi	r17, 0x00	; 0
+	for(char i=0; i<9; i++){
+		ds18b20_buffer[i]=read_18b20();
+ 19c:	c4 df       	rcall	.-120    	; 0x126 <read_18b20>
+ 19e:	89 93       	st	Y+, r24
+
+void DS18b20_readRam(void){
+	DS18B20_init();        // Инициализация DS18B20
+	write_18b20(0xCC);     // Проверка кода датчика
+	write_18b20(0xBE);     // Считываем содержимое ОЗУ
+	for(char i=0; i<9; i++){
+ 1a0:	c0 17       	cp	r28, r16
+ 1a2:	d1 07       	cpc	r29, r17
+ 1a4:	d9 f7       	brne	.-10     	; 0x19c <DS18b20_readRam+0x1a>
+		ds18b20_buffer[i]=read_18b20();
+	}
+}
+ 1a6:	df 91       	pop	r29
+ 1a8:	cf 91       	pop	r28
+ 1aa:	1f 91       	pop	r17
+ 1ac:	0f 91       	pop	r16
+ 1ae:	08 95       	ret
+
+000001b0 <initTimer>:
+
+#define  F_CPU 8000000L
+
+void initTimer(){
+	//Timer period 10mks. Int by OCR0A comp vector.
+	TCCR0A=(0<<COM0A1) | (0<<COM0A0) | (0<<COM0B1) | (0<<COM0B0) | (1<<WGM01) | (0<<WGM00);
+ 1b0:	82 e0       	ldi	r24, 0x02	; 2
+ 1b2:	80 bf       	out	0x30, r24	; 48
+	TCCR0B=(0<<WGM02) | (0<<CS02) | (0<<CS01) | (0<<CS00);
+ 1b4:	13 be       	out	0x33, r1	; 51
+	TCNT0=0x00;
+ 1b6:	12 be       	out	0x32, r1	; 50
+	OCR0A=0x9;
+ 1b8:	99 e0       	ldi	r25, 0x09	; 9
+ 1ba:	96 bf       	out	0x36, r25	; 54
+	OCR0B=0x00;
+ 1bc:	1c be       	out	0x3c, r1	; 60
+	// Timer/Counter 0 Interrupt(s) initialization
+	TIMSK0=(0<<OCIE0B) | (1<<OCIE0A) | (0<<TOIE0);
+ 1be:	89 bf       	out	0x39, r24	; 57
+ 1c0:	08 95       	ret
+
+000001c2 <main>:
+	
+}
+
+
+int main()
+{
+ 1c2:	cf 93       	push	r28
+ 1c4:	df 93       	push	r29
+ 1c6:	cd b7       	in	r28, 0x3d	; 61
+ 1c8:	de b7       	in	r29, 0x3e	; 62
+ 1ca:	c0 56       	subi	r28, 0x60	; 96
+ 1cc:	d1 40       	sbci	r29, 0x01	; 1
+ 1ce:	0f b6       	in	r0, 0x3f	; 63
+ 1d0:	f8 94       	cli
+ 1d2:	de bf       	out	0x3e, r29	; 62
+ 1d4:	0f be       	out	0x3f, r0	; 63
+ 1d6:	cd bf       	out	0x3d, r28	; 61
+	initTimer();
+ 1d8:	eb df       	rcall	.-42     	; 0x1b0 <initTimer>
+
+	Uart serial0 = {9600,&DDRA,&PORTA,&PINA,PA5,PA1};
+ 1da:	fe 01       	movw	r30, r28
+ 1dc:	e7 5f       	subi	r30, 0xF7	; 247
+ 1de:	fe 4f       	sbci	r31, 0xFE	; 254
+ 1e0:	18 e5       	ldi	r17, 0x58	; 88
+ 1e2:	df 01       	movw	r26, r30
+ 1e4:	21 2f       	mov	r18, r17
+ 1e6:	1d 92       	st	X+, r1
+ 1e8:	2a 95       	dec	r18
+ 1ea:	e9 f7       	brne	.-6      	; 0x1e6 <main+0x24>
+ 1ec:	0f 2e       	mov	r0, r31
+ 1ee:	f0 e8       	ldi	r31, 0x80	; 128
+ 1f0:	cf 2e       	mov	r12, r31
+ 1f2:	f5 e2       	ldi	r31, 0x25	; 37
+ 1f4:	df 2e       	mov	r13, r31
+ 1f6:	e1 2c       	mov	r14, r1
+ 1f8:	f1 2c       	mov	r15, r1
+ 1fa:	f0 2d       	mov	r31, r0
+ 1fc:	c0 82       	st	Z, r12
+ 1fe:	d1 82       	std	Z+1, r13	; 0x01
+ 200:	e2 82       	std	Z+2, r14	; 0x02
+ 202:	f3 82       	std	Z+3, r15	; 0x03
+ 204:	6a e3       	ldi	r22, 0x3A	; 58
+ 206:	70 e0       	ldi	r23, 0x00	; 0
+ 208:	75 83       	std	Z+5, r23	; 0x05
+ 20a:	64 83       	std	Z+4, r22	; 0x04
+ 20c:	4b e3       	ldi	r20, 0x3B	; 59
+ 20e:	50 e0       	ldi	r21, 0x00	; 0
+ 210:	57 83       	std	Z+7, r21	; 0x07
+ 212:	46 83       	std	Z+6, r20	; 0x06
+ 214:	89 e3       	ldi	r24, 0x39	; 57
+ 216:	90 e0       	ldi	r25, 0x00	; 0
+ 218:	91 87       	std	Z+9, r25	; 0x09
+ 21a:	80 87       	std	Z+8, r24	; 0x08
+ 21c:	25 e0       	ldi	r18, 0x05	; 5
+ 21e:	22 87       	std	Z+10, r18	; 0x0a
+ 220:	21 e0       	ldi	r18, 0x01	; 1
+ 222:	23 87       	std	Z+11, r18	; 0x0b
+ 224:	08 e5       	ldi	r16, 0x58	; 88
+ 226:	9e 01       	movw	r18, r28
+ 228:	2f 5f       	subi	r18, 0xFF	; 255
+ 22a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 22c:	d9 01       	movw	r26, r18
+ 22e:	01 90       	ld	r0, Z+
+ 230:	0d 92       	st	X+, r0
+ 232:	0a 95       	dec	r16
+ 234:	e1 f7       	brne	.-8      	; 0x22e <main+0x6c>
+	Uart serial1 = {9600,&DDRA,&PORTA,&PINA,PA4,PA0};
+ 236:	fe 01       	movw	r30, r28
+ 238:	ef 54       	subi	r30, 0x4F	; 79
+ 23a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 23c:	df 01       	movw	r26, r30
+ 23e:	1d 92       	st	X+, r1
+ 240:	1a 95       	dec	r17
+ 242:	e9 f7       	brne	.-6      	; 0x23e <main+0x7c>
+ 244:	c0 82       	st	Z, r12
+ 246:	d1 82       	std	Z+1, r13	; 0x01
+ 248:	e2 82       	std	Z+2, r14	; 0x02
+ 24a:	f3 82       	std	Z+3, r15	; 0x03
+ 24c:	75 83       	std	Z+5, r23	; 0x05
+ 24e:	64 83       	std	Z+4, r22	; 0x04
+ 250:	57 83       	std	Z+7, r21	; 0x07
+ 252:	46 83       	std	Z+6, r20	; 0x06
+ 254:	91 87       	std	Z+9, r25	; 0x09
+ 256:	80 87       	std	Z+8, r24	; 0x08
+ 258:	84 e0       	ldi	r24, 0x04	; 4
+ 25a:	82 87       	std	Z+10, r24	; 0x0a
+ 25c:	ce 01       	movw	r24, r28
+ 25e:	87 5a       	subi	r24, 0xA7	; 167
+ 260:	9f 4f       	sbci	r25, 0xFF	; 255
+ 262:	48 e5       	ldi	r20, 0x58	; 88
+ 264:	dc 01       	movw	r26, r24
+ 266:	01 90       	ld	r0, Z+
+ 268:	0d 92       	st	X+, r0
+ 26a:	4a 95       	dec	r20
+ 26c:	e1 f7       	brne	.-8      	; 0x266 <__stack+0x7>
+	seial_0 = &serial0;
+ 26e:	30 93 78 00 	sts	0x0078, r19	; 0x800078 <seial_0+0x1>
+ 272:	20 93 77 00 	sts	0x0077, r18	; 0x800077 <seial_0>
+	seial_1 = &serial1;
+ 276:	90 93 7a 00 	sts	0x007A, r25	; 0x80007a <seial_1+0x1>
+ 27a:	80 93 79 00 	sts	0x0079, r24	; 0x800079 <seial_1>
+	softSerialBegin(seial_1);
+ 27e:	fc d0       	rcall	.+504    	; 0x478 <softSerialBegin>
+	softSerialBegin(seial_0);
+ 280:	80 91 77 00 	lds	r24, 0x0077	; 0x800077 <seial_0>
+ 284:	90 91 78 00 	lds	r25, 0x0078	; 0x800078 <seial_0+0x1>
+ 288:	f7 d0       	rcall	.+494    	; 0x478 <softSerialBegin>
+	
+	while (1) {
+		DS18b20_readRam();
+ 28a:	7b df       	rcall	.-266    	; 0x182 <DS18b20_readRam>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 28c:	bf e7       	ldi	r27, 0x7F	; 127
+ 28e:	2a e1       	ldi	r18, 0x1A	; 26
+ 290:	86 e0       	ldi	r24, 0x06	; 6
+ 292:	b1 50       	subi	r27, 0x01	; 1
+ 294:	20 40       	sbci	r18, 0x00	; 0
+ 296:	80 40       	sbci	r24, 0x00	; 0
+ 298:	e1 f7       	brne	.-8      	; 0x292 <__stack+0x33>
+ 29a:	00 c0       	rjmp	.+0      	; 0x29c <__stack+0x3d>
+ 29c:	00 00       	nop
+ 29e:	9f e7       	ldi	r25, 0x7F	; 127
+ 2a0:	aa e1       	ldi	r26, 0x1A	; 26
+ 2a2:	b6 e0       	ldi	r27, 0x06	; 6
+ 2a4:	91 50       	subi	r25, 0x01	; 1
+ 2a6:	a0 40       	sbci	r26, 0x00	; 0
+ 2a8:	b0 40       	sbci	r27, 0x00	; 0
+ 2aa:	e1 f7       	brne	.-8      	; 0x2a4 <__stack+0x45>
+ 2ac:	00 c0       	rjmp	.+0      	; 0x2ae <__stack+0x4f>
+ 2ae:	00 00       	nop
+ 2b0:	ec cf       	rjmp	.-40     	; 0x28a <__stack+0x2b>
+
+000002b2 <__vector_9>:
+	{ 300,      1895,       3805,      3805,   3802,   },
+};
+
+const int XMIT_START_ADJUSTMENT = 4;
+
+ISR(TIM0_COMPA_vect){
+ 2b2:	1f 92       	push	r1
+ 2b4:	0f 92       	push	r0
+ 2b6:	0f b6       	in	r0, 0x3f	; 63
+ 2b8:	0f 92       	push	r0
+ 2ba:	11 24       	eor	r1, r1
+ 2bc:	8f 93       	push	r24
+ 2be:	9f 93       	push	r25
+	pWidth++; //Ticks every 10 mks 
+ 2c0:	80 91 7b 00 	lds	r24, 0x007B	; 0x80007b <pWidth>
+ 2c4:	90 91 7c 00 	lds	r25, 0x007C	; 0x80007c <pWidth+0x1>
+ 2c8:	01 96       	adiw	r24, 0x01	; 1
+ 2ca:	90 93 7c 00 	sts	0x007C, r25	; 0x80007c <pWidth+0x1>
+ 2ce:	80 93 7b 00 	sts	0x007B, r24	; 0x80007b <pWidth>
+}
+ 2d2:	9f 91       	pop	r25
+ 2d4:	8f 91       	pop	r24
+ 2d6:	0f 90       	pop	r0
+ 2d8:	0f be       	out	0x3f, r0	; 63
+ 2da:	0f 90       	pop	r0
+ 2dc:	1f 90       	pop	r1
+ 2de:	18 95       	reti
+
+000002e0 <handler>:
+			: "+w" (delay), "+a" (tmp)
+			: "0" (delay)
+	);
+}
+
+void handler(Uart *p){
+ 2e0:	cf 93       	push	r28
+ 2e2:	df 93       	push	r29
+ 2e4:	dc 01       	movw	r26, r24
+	uint8_t d = 0;
+	
+	// If RX line is high, then we don't see any start bit
+	// so interrupt is probably not for us
+	if ( !(*p->_PIN&(1<<p->_RX_PIN_NUM)) ) {
+ 2e6:	18 96       	adiw	r26, 0x08	; 8
+ 2e8:	ed 91       	ld	r30, X+
+ 2ea:	fc 91       	ld	r31, X
+ 2ec:	19 97       	sbiw	r26, 0x09	; 9
+ 2ee:	1a 96       	adiw	r26, 0x0a	; 10
+ 2f0:	2c 91       	ld	r18, X
+ 2f2:	1a 97       	sbiw	r26, 0x0a	; 10
+ 2f4:	80 81       	ld	r24, Z
+ 2f6:	90 e0       	ldi	r25, 0x00	; 0
+ 2f8:	02 c0       	rjmp	.+4      	; 0x2fe <handler+0x1e>
+ 2fa:	95 95       	asr	r25
+ 2fc:	87 95       	ror	r24
+ 2fe:	2a 95       	dec	r18
+ 300:	e2 f7       	brpl	.-8      	; 0x2fa <handler+0x1a>
+ 302:	80 fd       	sbrc	r24, 0
+ 304:	79 c0       	rjmp	.+242    	; 0x3f8 <handler+0x118>
+		// Wait approximately 1/2 of a bit width to "center" the sample
+		tunedDelay(p->_rx_delay_centering);
+ 306:	fd 01       	movw	r30, r26
+ 308:	ee 5a       	subi	r30, 0xAE	; 174
+ 30a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 30c:	80 81       	ld	r24, Z
+ 30e:	91 81       	ldd	r25, Z+1	; 0x01
+
+/* static */
+inline void tunedDelay(uint16_t delay) {
+	uint8_t tmp = 0;
+
+	asm volatile("sbiw    %0, 0x01 \n\t"
+ 310:	20 e0       	ldi	r18, 0x00	; 0
+ 312:	01 97       	sbiw	r24, 0x01	; 1
+ 314:	2f ef       	ldi	r18, 0xFF	; 255
+ 316:	8f 3f       	cpi	r24, 0xFF	; 255
+ 318:	92 07       	cpc	r25, r18
+ 31a:	d9 f7       	brne	.-10     	; 0x312 <handler+0x32>
+ 31c:	88 e0       	ldi	r24, 0x08	; 8
+ 31e:	90 e0       	ldi	r25, 0x00	; 0
+	if ( !(*p->_PIN&(1<<p->_RX_PIN_NUM)) ) {
+		// Wait approximately 1/2 of a bit width to "center" the sample
+		tunedDelay(p->_rx_delay_centering);
+
+		// Read each of the 8 bits
+		for (uint8_t i = 0x1; i; i <<= 1) {
+ 320:	41 e0       	ldi	r20, 0x01	; 1
+			: "0" (delay)
+	);
+}
+
+void handler(Uart *p){
+	uint8_t d = 0;
+ 322:	50 e0       	ldi	r21, 0x00	; 0
+		// Wait approximately 1/2 of a bit width to "center" the sample
+		tunedDelay(p->_rx_delay_centering);
+
+		// Read each of the 8 bits
+		for (uint8_t i = 0x1; i; i <<= 1) {
+			tunedDelay(p->_rx_delay_intrabit-1);
+ 324:	ed 01       	movw	r28, r26
+ 326:	c0 5b       	subi	r28, 0xB0	; 176
+ 328:	df 4f       	sbci	r29, 0xFF	; 255
+
+/* static */
+inline void tunedDelay(uint16_t delay) {
+	uint8_t tmp = 0;
+
+	asm volatile("sbiw    %0, 0x01 \n\t"
+ 32a:	70 e0       	ldi	r23, 0x00	; 0
+		// Wait approximately 1/2 of a bit width to "center" the sample
+		tunedDelay(p->_rx_delay_centering);
+
+		// Read each of the 8 bits
+		for (uint8_t i = 0x1; i; i <<= 1) {
+			tunedDelay(p->_rx_delay_intrabit-1);
+ 32c:	e8 81       	ld	r30, Y
+ 32e:	f9 81       	ldd	r31, Y+1	; 0x01
+ 330:	31 97       	sbiw	r30, 0x01	; 1
+
+/* static */
+inline void tunedDelay(uint16_t delay) {
+	uint8_t tmp = 0;
+
+	asm volatile("sbiw    %0, 0x01 \n\t"
+ 332:	27 2f       	mov	r18, r23
+ 334:	31 97       	sbiw	r30, 0x01	; 1
+ 336:	2f ef       	ldi	r18, 0xFF	; 255
+ 338:	ef 3f       	cpi	r30, 0xFF	; 255
+ 33a:	f2 07       	cpc	r31, r18
+ 33c:	d9 f7       	brne	.-10     	; 0x334 <handler+0x54>
+
+		// Read each of the 8 bits
+		for (uint8_t i = 0x1; i; i <<= 1) {
+			tunedDelay(p->_rx_delay_intrabit-1);
+			uint8_t noti = ~i;
+			if ((*p->_PIN&(1<<p->_RX_PIN_NUM)))
+ 33e:	18 96       	adiw	r26, 0x08	; 8
+ 340:	ed 91       	ld	r30, X+
+ 342:	fc 91       	ld	r31, X
+ 344:	19 97       	sbiw	r26, 0x09	; 9
+ 346:	1a 96       	adiw	r26, 0x0a	; 10
+ 348:	6c 91       	ld	r22, X
+ 34a:	1a 97       	sbiw	r26, 0x0a	; 10
+ 34c:	20 81       	ld	r18, Z
+ 34e:	30 e0       	ldi	r19, 0x00	; 0
+ 350:	02 c0       	rjmp	.+4      	; 0x356 <handler+0x76>
+ 352:	35 95       	asr	r19
+ 354:	27 95       	ror	r18
+ 356:	6a 95       	dec	r22
+ 358:	e2 f7       	brpl	.-8      	; 0x352 <handler+0x72>
+ 35a:	20 ff       	sbrs	r18, 0
+ 35c:	02 c0       	rjmp	.+4      	; 0x362 <handler+0x82>
+			d |= i;
+ 35e:	54 2b       	or	r21, r20
+ 360:	03 c0       	rjmp	.+6      	; 0x368 <handler+0x88>
+			else // else clause added to ensure function timing is ~balanced
+			d &= noti;
+ 362:	24 2f       	mov	r18, r20
+ 364:	20 95       	com	r18
+ 366:	52 23       	and	r21, r18
+	if ( !(*p->_PIN&(1<<p->_RX_PIN_NUM)) ) {
+		// Wait approximately 1/2 of a bit width to "center" the sample
+		tunedDelay(p->_rx_delay_centering);
+
+		// Read each of the 8 bits
+		for (uint8_t i = 0x1; i; i <<= 1) {
+ 368:	44 0f       	add	r20, r20
+ 36a:	01 97       	sbiw	r24, 0x01	; 1
+ 36c:	f9 f6       	brne	.-66     	; 0x32c <handler+0x4c>
+			if ((*p->_PIN&(1<<p->_RX_PIN_NUM)))
+			d |= i;
+			else // else clause added to ensure function timing is ~balanced
+			d &= noti;
+		};
+		tunedDelay(p->_rx_delay_stopbit-5);
+ 36e:	fd 01       	movw	r30, r26
+ 370:	ec 5a       	subi	r30, 0xAC	; 172
+ 372:	ff 4f       	sbci	r31, 0xFF	; 255
+ 374:	80 81       	ld	r24, Z
+ 376:	91 81       	ldd	r25, Z+1	; 0x01
+ 378:	05 97       	sbiw	r24, 0x05	; 5
+
+/* static */
+inline void tunedDelay(uint16_t delay) {
+	uint8_t tmp = 0;
+
+	asm volatile("sbiw    %0, 0x01 \n\t"
+ 37a:	20 e0       	ldi	r18, 0x00	; 0
+ 37c:	01 97       	sbiw	r24, 0x01	; 1
+ 37e:	2f ef       	ldi	r18, 0xFF	; 255
+ 380:	8f 3f       	cpi	r24, 0xFF	; 255
+ 382:	92 07       	cpc	r25, r18
+ 384:	d9 f7       	brne	.-10     	; 0x37c <handler+0x9c>
+			else // else clause added to ensure function timing is ~balanced
+			d &= noti;
+		};
+		tunedDelay(p->_rx_delay_stopbit-5);
+		
+		if(!(*p->_PIN&(1<<p->_RX_PIN_NUM))){ //If no stop bit - run timer and measure calibration  impulse width.
+ 386:	18 96       	adiw	r26, 0x08	; 8
+ 388:	ed 91       	ld	r30, X+
+ 38a:	fc 91       	ld	r31, X
+ 38c:	19 97       	sbiw	r26, 0x09	; 9
+ 38e:	1a 96       	adiw	r26, 0x0a	; 10
+ 390:	2c 91       	ld	r18, X
+ 392:	1a 97       	sbiw	r26, 0x0a	; 10
+ 394:	80 81       	ld	r24, Z
+ 396:	90 e0       	ldi	r25, 0x00	; 0
+ 398:	02 c0       	rjmp	.+4      	; 0x39e <handler+0xbe>
+ 39a:	95 95       	asr	r25
+ 39c:	87 95       	ror	r24
+ 39e:	2a 95       	dec	r18
+ 3a0:	e2 f7       	brpl	.-8      	; 0x39a <handler+0xba>
+ 3a2:	80 fd       	sbrc	r24, 0
+ 3a4:	09 c0       	rjmp	.+18     	; 0x3b8 <handler+0xd8>
+			pWidth=0;
+ 3a6:	10 92 7c 00 	sts	0x007C, r1	; 0x80007c <pWidth+0x1>
+ 3aa:	10 92 7b 00 	sts	0x007B, r1	; 0x80007b <pWidth>
+			TCCR0B=(0<<WGM02) | (0<<CS02) | (1<<CS01) | (0<<CS00); //rum timer(10���)
+ 3ae:	82 e0       	ldi	r24, 0x02	; 2
+ 3b0:	83 bf       	out	0x33, r24	; 51
+			FLAG=1;
+ 3b2:	81 e0       	ldi	r24, 0x01	; 1
+ 3b4:	80 93 7e 00 	sts	0x007E, r24	; 0x80007e <FLAG>
+			
+		}
+		
+		// if buffer full, set the overflow flag and return
+		if (((p->_receive_buffer_tail + 1) & _SS_RX_BUFF_MASK) != p->_receive_buffer_head) {  // circular buffer
+ 3b8:	fd 01       	movw	r30, r26
+ 3ba:	e4 5b       	subi	r30, 0xB4	; 180
+ 3bc:	ff 4f       	sbci	r31, 0xFF	; 255
+ 3be:	80 81       	ld	r24, Z
+ 3c0:	31 96       	adiw	r30, 0x01	; 1
+ 3c2:	20 81       	ld	r18, Z
+ 3c4:	90 e0       	ldi	r25, 0x00	; 0
+ 3c6:	01 96       	adiw	r24, 0x01	; 1
+ 3c8:	8f 73       	andi	r24, 0x3F	; 63
+ 3ca:	99 27       	eor	r25, r25
+ 3cc:	30 e0       	ldi	r19, 0x00	; 0
+ 3ce:	82 17       	cp	r24, r18
+ 3d0:	93 07       	cpc	r25, r19
+ 3d2:	59 f0       	breq	.+22     	; 0x3ea <handler+0x10a>
+			// save new data in buffer: tail points to where byte goes
+			p->_receive_buffer[p->_receive_buffer_tail] = d; // save new byte
+ 3d4:	31 97       	sbiw	r30, 0x01	; 1
+ 3d6:	80 81       	ld	r24, Z
+ 3d8:	a8 0f       	add	r26, r24
+ 3da:	b1 1d       	adc	r27, r1
+ 3dc:	1c 96       	adiw	r26, 0x0c	; 12
+ 3de:	5c 93       	st	X, r21
+			p->_receive_buffer_tail = (p->_receive_buffer_tail + 1) & _SS_RX_BUFF_MASK;  // circular buffer
+ 3e0:	80 81       	ld	r24, Z
+ 3e2:	8f 5f       	subi	r24, 0xFF	; 255
+ 3e4:	8f 73       	andi	r24, 0x3F	; 63
+ 3e6:	80 83       	st	Z, r24
+ 3e8:	07 c0       	rjmp	.+14     	; 0x3f8 <handler+0x118>
+			} else {
+			p->_buffer_overflow = true;
+ 3ea:	a2 5b       	subi	r26, 0xB2	; 178
+ 3ec:	bf 4f       	sbci	r27, 0xFF	; 255
+ 3ee:	81 e0       	ldi	r24, 0x01	; 1
+ 3f0:	90 e0       	ldi	r25, 0x00	; 0
+ 3f2:	11 96       	adiw	r26, 0x01	; 1
+ 3f4:	9c 93       	st	X, r25
+ 3f6:	8e 93       	st	-X, r24
+		}
+	}
+}
+ 3f8:	df 91       	pop	r29
+ 3fa:	cf 91       	pop	r28
+ 3fc:	08 95       	ret
+
+000003fe <__vector_2>:
+//
+// Interrupt handling, receive routine
+//
+
+ISR(PCINT0_vect) {
+ 3fe:	1f 92       	push	r1
+ 400:	0f 92       	push	r0
+ 402:	0f b6       	in	r0, 0x3f	; 63
+ 404:	0f 92       	push	r0
+ 406:	11 24       	eor	r1, r1
+ 408:	2f 93       	push	r18
+ 40a:	3f 93       	push	r19
+ 40c:	4f 93       	push	r20
+ 40e:	5f 93       	push	r21
+ 410:	6f 93       	push	r22
+ 412:	7f 93       	push	r23
+ 414:	8f 93       	push	r24
+ 416:	9f 93       	push	r25
+ 418:	af 93       	push	r26
+ 41a:	bf 93       	push	r27
+ 41c:	ef 93       	push	r30
+ 41e:	ff 93       	push	r31
+	if(FLAG){ //if flag of measurement present - wait for front to end of measuerment. 
+ 420:	80 91 7e 00 	lds	r24, 0x007E	; 0x80007e <FLAG>
+ 424:	88 23       	and	r24, r24
+ 426:	49 f0       	breq	.+18     	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+		if(PINA&(1<<PA4)){
+ 428:	cc 9b       	sbis	0x19, 4	; 25
+ 42a:	07 c0       	rjmp	.+14     	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+			TCCR0B=(0<<WGM02) | (0<<CS02) | (0<<CS01) | (0<<CS00);
+ 42c:	13 be       	out	0x33, r1	; 51
+			TCNT0=0x00;
+ 42e:	12 be       	out	0x32, r1	; 50
+			FLAG=0;
+ 430:	10 92 7e 00 	sts	0x007E, r1	; 0x80007e <FLAG>
+			calibTimeReady=1;
+ 434:	81 e0       	ldi	r24, 0x01	; 1
+ 436:	80 93 7d 00 	sts	0x007D, r24	; 0x80007d <calibTimeReady>
+		}
+	}
+	
+	if(!(PINA&(1<<PA5))){ 
+ 43a:	cd 99       	sbic	0x19, 5	; 25
+ 43c:	05 c0       	rjmp	.+10     	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+		handler(seial_0);
+ 43e:	80 91 77 00 	lds	r24, 0x0077	; 0x800077 <seial_0>
+ 442:	90 91 78 00 	lds	r25, 0x0078	; 0x800078 <seial_0+0x1>
+ 446:	4c df       	rcall	.-360    	; 0x2e0 <handler>
+	}
+	if(!(PINA&(1<<PA4))){  //If low level on UART RX channel detected - call handler function with uart port as argument.
+ 448:	cc 99       	sbic	0x19, 4	; 25
+ 44a:	05 c0       	rjmp	.+10     	; 0x456 <__LOCK_REGION_LENGTH__+0x56>
+		handler(seial_1);
+ 44c:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <seial_1>
+ 450:	90 91 7a 00 	lds	r25, 0x007A	; 0x80007a <seial_1+0x1>
+ 454:	45 df       	rcall	.-374    	; 0x2e0 <handler>
+	}
+	
+}
+ 456:	ff 91       	pop	r31
+ 458:	ef 91       	pop	r30
+ 45a:	bf 91       	pop	r27
+ 45c:	af 91       	pop	r26
+ 45e:	9f 91       	pop	r25
+ 460:	8f 91       	pop	r24
+ 462:	7f 91       	pop	r23
+ 464:	6f 91       	pop	r22
+ 466:	5f 91       	pop	r21
+ 468:	4f 91       	pop	r20
+ 46a:	3f 91       	pop	r19
+ 46c:	2f 91       	pop	r18
+ 46e:	0f 90       	pop	r0
+ 470:	0f be       	out	0x3f, r0	; 63
+ 472:	0f 90       	pop	r0
+ 474:	1f 90       	pop	r1
+ 476:	18 95       	reti
+
+00000478 <softSerialBegin>:
+
+//
+// Public methods
+//
+
+void softSerialBegin(Uart *p) {
+ 478:	8f 92       	push	r8
+ 47a:	9f 92       	push	r9
+ 47c:	af 92       	push	r10
+ 47e:	bf 92       	push	r11
+ 480:	cf 92       	push	r12
+ 482:	df 92       	push	r13
+ 484:	ef 92       	push	r14
+ 486:	ff 92       	push	r15
+ 488:	dc 01       	movw	r26, r24
+	
+	unsigned i;
+	p->_receive_buffer_head = p->_receive_buffer_tail = 0;
+ 48a:	fc 01       	movw	r30, r24
+ 48c:	e4 5b       	subi	r30, 0xB4	; 180
+ 48e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 490:	10 82       	st	Z, r1
+ 492:	31 96       	adiw	r30, 0x01	; 1
+ 494:	10 82       	st	Z, r1
+	p->_buffer_overflow = false;
+ 496:	31 96       	adiw	r30, 0x01	; 1
+ 498:	11 82       	std	Z+1, r1	; 0x01
+ 49a:	10 82       	st	Z, r1
+	*p->_DDR |= (1<<p->_TX_PIN_NUM); // set TX for output
+ 49c:	1b 96       	adiw	r26, 0x0b	; 11
+ 49e:	2c 91       	ld	r18, X
+ 4a0:	1b 97       	sbiw	r26, 0x0b	; 11
+ 4a2:	14 96       	adiw	r26, 0x04	; 4
+ 4a4:	ed 91       	ld	r30, X+
+ 4a6:	fc 91       	ld	r31, X
+ 4a8:	15 97       	sbiw	r26, 0x05	; 5
+ 4aa:	81 e0       	ldi	r24, 0x01	; 1
+ 4ac:	90 e0       	ldi	r25, 0x00	; 0
+ 4ae:	ac 01       	movw	r20, r24
+ 4b0:	02 c0       	rjmp	.+4      	; 0x4b6 <softSerialBegin+0x3e>
+ 4b2:	44 0f       	add	r20, r20
+ 4b4:	55 1f       	adc	r21, r21
+ 4b6:	2a 95       	dec	r18
+ 4b8:	e2 f7       	brpl	.-8      	; 0x4b2 <softSerialBegin+0x3a>
+ 4ba:	9a 01       	movw	r18, r20
+ 4bc:	30 81       	ld	r19, Z
+ 4be:	23 2b       	or	r18, r19
+ 4c0:	20 83       	st	Z, r18
+	*p->_DDR &= ~(1<<p->_RX_PIN_NUM); // set RX for input
+ 4c2:	1a 96       	adiw	r26, 0x0a	; 10
+ 4c4:	2c 91       	ld	r18, X
+ 4c6:	1a 97       	sbiw	r26, 0x0a	; 10
+ 4c8:	14 96       	adiw	r26, 0x04	; 4
+ 4ca:	ed 91       	ld	r30, X+
+ 4cc:	fc 91       	ld	r31, X
+ 4ce:	15 97       	sbiw	r26, 0x05	; 5
+ 4d0:	bc 01       	movw	r22, r24
+ 4d2:	02 c0       	rjmp	.+4      	; 0x4d8 <softSerialBegin+0x60>
+ 4d4:	66 0f       	add	r22, r22
+ 4d6:	77 1f       	adc	r23, r23
+ 4d8:	2a 95       	dec	r18
+ 4da:	e2 f7       	brpl	.-8      	; 0x4d4 <softSerialBegin+0x5c>
+ 4dc:	9b 01       	movw	r18, r22
+ 4de:	20 95       	com	r18
+ 4e0:	30 95       	com	r19
+ 4e2:	30 81       	ld	r19, Z
+ 4e4:	23 23       	and	r18, r19
+ 4e6:	20 83       	st	Z, r18
+	*p->_PORT |= (1<<p->_RX_PIN_NUM)|(1<<p->_TX_PIN_NUM); // assumes no inverse logic
+ 4e8:	1a 96       	adiw	r26, 0x0a	; 10
+ 4ea:	2c 91       	ld	r18, X
+ 4ec:	1a 97       	sbiw	r26, 0x0a	; 10
+ 4ee:	1b 96       	adiw	r26, 0x0b	; 11
+ 4f0:	4c 91       	ld	r20, X
+ 4f2:	1b 97       	sbiw	r26, 0x0b	; 11
+ 4f4:	16 96       	adiw	r26, 0x06	; 6
+ 4f6:	ed 91       	ld	r30, X+
+ 4f8:	fc 91       	ld	r31, X
+ 4fa:	17 97       	sbiw	r26, 0x07	; 7
+ 4fc:	bc 01       	movw	r22, r24
+ 4fe:	02 c0       	rjmp	.+4      	; 0x504 <softSerialBegin+0x8c>
+ 500:	66 0f       	add	r22, r22
+ 502:	77 1f       	adc	r23, r23
+ 504:	2a 95       	dec	r18
+ 506:	e2 f7       	brpl	.-8      	; 0x500 <softSerialBegin+0x88>
+ 508:	02 c0       	rjmp	.+4      	; 0x50e <softSerialBegin+0x96>
+ 50a:	88 0f       	add	r24, r24
+ 50c:	99 1f       	adc	r25, r25
+ 50e:	4a 95       	dec	r20
+ 510:	e2 f7       	brpl	.-8      	; 0x50a <softSerialBegin+0x92>
+ 512:	86 2b       	or	r24, r22
+ 514:	97 2b       	or	r25, r23
+ 516:	90 81       	ld	r25, Z
+ 518:	89 2b       	or	r24, r25
+ 51a:	80 83       	st	Z, r24
+	
+
+	for (i = 0; i < sizeof(table) / sizeof(table[0]); ++i) {
+		
+		long baud = pgm_read_dword(&table[i].baud);
+ 51c:	e2 e2       	ldi	r30, 0x22	; 34
+ 51e:	f0 e0       	ldi	r31, 0x00	; 0
+ 520:	c5 90       	lpm	r12, Z+
+ 522:	d5 90       	lpm	r13, Z+
+ 524:	e5 90       	lpm	r14, Z+
+ 526:	f4 90       	lpm	r15, Z
+		if (baud == p->_SPEED) {
+ 528:	4d 91       	ld	r20, X+
+ 52a:	5d 91       	ld	r21, X+
+ 52c:	6d 91       	ld	r22, X+
+ 52e:	7c 91       	ld	r23, X
+ 530:	13 97       	sbiw	r26, 0x03	; 3
+ 532:	c4 16       	cp	r12, r20
+ 534:	d5 06       	cpc	r13, r21
+ 536:	e6 06       	cpc	r14, r22
+ 538:	f7 06       	cpc	r15, r23
+ 53a:	a9 f0       	breq	.+42     	; 0x566 <softSerialBegin+0xee>
+ 53c:	4e e2       	ldi	r20, 0x2E	; 46
+ 53e:	50 e0       	ldi	r21, 0x00	; 0
+	*p->_DDR |= (1<<p->_TX_PIN_NUM); // set TX for output
+	*p->_DDR &= ~(1<<p->_RX_PIN_NUM); // set RX for input
+	*p->_PORT |= (1<<p->_RX_PIN_NUM)|(1<<p->_TX_PIN_NUM); // assumes no inverse logic
+	
+
+	for (i = 0; i < sizeof(table) / sizeof(table[0]); ++i) {
+ 540:	21 e0       	ldi	r18, 0x01	; 1
+ 542:	30 e0       	ldi	r19, 0x00	; 0
+		
+		long baud = pgm_read_dword(&table[i].baud);
+ 544:	fa 01       	movw	r30, r20
+ 546:	85 90       	lpm	r8, Z+
+ 548:	95 90       	lpm	r9, Z+
+ 54a:	a5 90       	lpm	r10, Z+
+ 54c:	b4 90       	lpm	r11, Z
+		if (baud == p->_SPEED) {
+ 54e:	cd 90       	ld	r12, X+
+ 550:	dd 90       	ld	r13, X+
+ 552:	ed 90       	ld	r14, X+
+ 554:	fc 90       	ld	r15, X
+ 556:	13 97       	sbiw	r26, 0x03	; 3
+ 558:	8c 14       	cp	r8, r12
+ 55a:	9d 04       	cpc	r9, r13
+ 55c:	ae 04       	cpc	r10, r14
+ 55e:	bf 04       	cpc	r11, r15
+ 560:	09 f0       	breq	.+2      	; 0x564 <softSerialBegin+0xec>
+ 562:	5f c0       	rjmp	.+190    	; 0x622 <softSerialBegin+0x1aa>
+ 564:	02 c0       	rjmp	.+4      	; 0x56a <softSerialBegin+0xf2>
+	*p->_DDR |= (1<<p->_TX_PIN_NUM); // set TX for output
+	*p->_DDR &= ~(1<<p->_RX_PIN_NUM); // set RX for input
+	*p->_PORT |= (1<<p->_RX_PIN_NUM)|(1<<p->_TX_PIN_NUM); // assumes no inverse logic
+	
+
+	for (i = 0; i < sizeof(table) / sizeof(table[0]); ++i) {
+ 566:	20 e0       	ldi	r18, 0x00	; 0
+ 568:	30 e0       	ldi	r19, 0x00	; 0
+		
+		long baud = pgm_read_dword(&table[i].baud);
+		if (baud == p->_SPEED) {
+			p->_rx_delay_centering = pgm_read_word(&table[i].rx_delay_centering);
+ 56a:	c9 01       	movw	r24, r18
+ 56c:	88 0f       	add	r24, r24
+ 56e:	99 1f       	adc	r25, r25
+ 570:	fc 01       	movw	r30, r24
+ 572:	e2 0f       	add	r30, r18
+ 574:	f3 1f       	adc	r31, r19
+ 576:	ee 0f       	add	r30, r30
+ 578:	ff 1f       	adc	r31, r31
+ 57a:	ee 0f       	add	r30, r30
+ 57c:	ff 1f       	adc	r31, r31
+ 57e:	ea 5d       	subi	r30, 0xDA	; 218
+ 580:	ff 4f       	sbci	r31, 0xFF	; 255
+ 582:	45 91       	lpm	r20, Z+
+ 584:	54 91       	lpm	r21, Z
+ 586:	fd 01       	movw	r30, r26
+ 588:	ee 5a       	subi	r30, 0xAE	; 174
+ 58a:	ff 4f       	sbci	r31, 0xFF	; 255
+ 58c:	51 83       	std	Z+1, r21	; 0x01
+ 58e:	40 83       	st	Z, r20
+			p->_rx_delay_intrabit = pgm_read_word(&table[i].rx_delay_intrabit);
+ 590:	fc 01       	movw	r30, r24
+ 592:	e2 0f       	add	r30, r18
+ 594:	f3 1f       	adc	r31, r19
+ 596:	ee 0f       	add	r30, r30
+ 598:	ff 1f       	adc	r31, r31
+ 59a:	ee 0f       	add	r30, r30
+ 59c:	ff 1f       	adc	r31, r31
+ 59e:	e8 5d       	subi	r30, 0xD8	; 216
+ 5a0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5a2:	45 91       	lpm	r20, Z+
+ 5a4:	54 91       	lpm	r21, Z
+ 5a6:	fd 01       	movw	r30, r26
+ 5a8:	e0 5b       	subi	r30, 0xB0	; 176
+ 5aa:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5ac:	51 83       	std	Z+1, r21	; 0x01
+ 5ae:	40 83       	st	Z, r20
+			p->_rx_delay_stopbit = pgm_read_word(&table[i].rx_delay_stopbit);
+ 5b0:	fc 01       	movw	r30, r24
+ 5b2:	e2 0f       	add	r30, r18
+ 5b4:	f3 1f       	adc	r31, r19
+ 5b6:	ee 0f       	add	r30, r30
+ 5b8:	ff 1f       	adc	r31, r31
+ 5ba:	ee 0f       	add	r30, r30
+ 5bc:	ff 1f       	adc	r31, r31
+ 5be:	e6 5d       	subi	r30, 0xD6	; 214
+ 5c0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5c2:	45 91       	lpm	r20, Z+
+ 5c4:	54 91       	lpm	r21, Z
+ 5c6:	fd 01       	movw	r30, r26
+ 5c8:	ec 5a       	subi	r30, 0xAC	; 172
+ 5ca:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5cc:	51 83       	std	Z+1, r21	; 0x01
+ 5ce:	40 83       	st	Z, r20
+			p->_tx_delay = pgm_read_word(&table[i].tx_delay);
+ 5d0:	fc 01       	movw	r30, r24
+ 5d2:	e2 0f       	add	r30, r18
+ 5d4:	f3 1f       	adc	r31, r19
+ 5d6:	ee 0f       	add	r30, r30
+ 5d8:	ff 1f       	adc	r31, r31
+ 5da:	ee 0f       	add	r30, r30
+ 5dc:	ff 1f       	adc	r31, r31
+ 5de:	e4 5d       	subi	r30, 0xD4	; 212
+ 5e0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5e2:	85 91       	lpm	r24, Z+
+ 5e4:	94 91       	lpm	r25, Z
+ 5e6:	fd 01       	movw	r30, r26
+ 5e8:	ea 5a       	subi	r30, 0xAA	; 170
+ 5ea:	ff 4f       	sbci	r31, 0xFF	; 255
+ 5ec:	91 83       	std	Z+1, r25	; 0x01
+ 5ee:	80 83       	st	Z, r24
+			// Set up RX interrupts, but only if we have a valid RX baud rate
+			GIMSK |= (1<<PCIE0);
+ 5f0:	8b b7       	in	r24, 0x3b	; 59
+ 5f2:	80 61       	ori	r24, 0x10	; 16
+ 5f4:	8b bf       	out	0x3b, r24	; 59
+			PCMSK0 |= (1<<p->_RX_PIN_NUM);
+ 5f6:	1a 96       	adiw	r26, 0x0a	; 10
+ 5f8:	3c 91       	ld	r19, X
+ 5fa:	22 b3       	in	r18, 0x12	; 18
+ 5fc:	81 e0       	ldi	r24, 0x01	; 1
+ 5fe:	90 e0       	ldi	r25, 0x00	; 0
+ 600:	02 c0       	rjmp	.+4      	; 0x606 <softSerialBegin+0x18e>
+ 602:	88 0f       	add	r24, r24
+ 604:	99 1f       	adc	r25, r25
+ 606:	3a 95       	dec	r19
+ 608:	e2 f7       	brpl	.-8      	; 0x602 <softSerialBegin+0x18a>
+ 60a:	82 2b       	or	r24, r18
+ 60c:	82 bb       	out	0x12, r24	; 18
+			tunedDelay(p->_tx_delay);
+ 60e:	80 81       	ld	r24, Z
+ 610:	91 81       	ldd	r25, Z+1	; 0x01
+
+/* static */
+inline void tunedDelay(uint16_t delay) {
+	uint8_t tmp = 0;
+
+	asm volatile("sbiw    %0, 0x01 \n\t"
+ 612:	20 e0       	ldi	r18, 0x00	; 0
+ 614:	01 97       	sbiw	r24, 0x01	; 1
+ 616:	2f ef       	ldi	r18, 0xFF	; 255
+ 618:	8f 3f       	cpi	r24, 0xFF	; 255
+ 61a:	92 07       	cpc	r25, r18
+ 61c:	d9 f7       	brne	.-10     	; 0x614 <softSerialBegin+0x19c>
+			// Set up RX interrupts, but only if we have a valid RX baud rate
+			GIMSK |= (1<<PCIE0);
+			PCMSK0 |= (1<<p->_RX_PIN_NUM);
+			tunedDelay(p->_tx_delay);
+			
+			sei();
+ 61e:	78 94       	sei
+			
+			return;
+ 620:	08 c0       	rjmp	.+16     	; 0x632 <softSerialBegin+0x1ba>
+	*p->_DDR |= (1<<p->_TX_PIN_NUM); // set TX for output
+	*p->_DDR &= ~(1<<p->_RX_PIN_NUM); // set RX for input
+	*p->_PORT |= (1<<p->_RX_PIN_NUM)|(1<<p->_TX_PIN_NUM); // assumes no inverse logic
+	
+
+	for (i = 0; i < sizeof(table) / sizeof(table[0]); ++i) {
+ 622:	2f 5f       	subi	r18, 0xFF	; 255
+ 624:	3f 4f       	sbci	r19, 0xFF	; 255
+ 626:	44 5f       	subi	r20, 0xF4	; 244
+ 628:	5f 4f       	sbci	r21, 0xFF	; 255
+ 62a:	2d 30       	cpi	r18, 0x0D	; 13
+ 62c:	31 05       	cpc	r19, r1
+ 62e:	09 f0       	breq	.+2      	; 0x632 <softSerialBegin+0x1ba>
+ 630:	89 cf       	rjmp	.-238    	; 0x544 <softSerialBegin+0xcc>
+		}
+	}
+
+	// No valid rate found
+	// Indicate an error
+}
+ 632:	ff 90       	pop	r15
+ 634:	ef 90       	pop	r14
+ 636:	df 90       	pop	r13
+ 638:	cf 90       	pop	r12
+ 63a:	bf 90       	pop	r11
+ 63c:	af 90       	pop	r10
+ 63e:	9f 90       	pop	r9
+ 640:	8f 90       	pop	r8
+ 642:	08 95       	ret
+
+00000644 <_exit>:
+ 644:	f8 94       	cli
+
+00000646 <__stop_program>:
+ 646:	ff cf       	rjmp	.-2      	; 0x646 <__stop_program>

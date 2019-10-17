@@ -23,7 +23,7 @@ It is recomended make int. RC oscillator calibration if device (attiny85a) send 
 
 ## Known issues
 
-Device may work unstable and freezes on internal RC oscillator.
+UART may work unstable on internal RC oscillator.
 
 ## Build firmware for external crystal oscillator
 

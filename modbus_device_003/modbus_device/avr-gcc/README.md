@@ -26,3 +26,12 @@ To use another change `PROGRAMMER` in `Makefile`.
 ### To flash fuses for external crystal 8 MHz
 
 `make fuse_extosc`
+
+## MCU
+
+### resources
+
+TC0 - internal clock `millis()`
+TC1 - internal RC oscillator calibration
+
+
